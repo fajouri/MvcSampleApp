@@ -1,0 +1,16 @@
+﻿@model MvcSampleApp.Core.Models.Artist
+@{
+    ViewBag.Title = "New Artist";
+}
+
+<h2>New Artist</h2>
+
+@using (Html.BeginForm("New","Artists", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name)
+    </div>
+
+    <input type="submit" value="Saved" />
+}

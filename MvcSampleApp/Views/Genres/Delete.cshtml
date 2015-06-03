@@ -1,0 +1,27 @@
+﻿@model MvcSampleApp.Core.Models.Genre
+
+@{
+    ViewBag.Title = "Delete Genre";
+}
+
+<h2>Delete Genre</h2>
+
+@using (Html.BeginForm("DeleteGenre", "Genres", FormMethod.Post))
+{
+    
+    @Html.HiddenFor(m => m.GenreId)
+    
+    <div>
+        @Html.LabelFor(m => m.Name)
+        @Html.DisplayFor(m => m.Name)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Description)
+        @Html.DisplayFor(m => m.Description)
+    </div>
+    
+    <p>
+        Confirm delete? <input type="submit" value="yes"/>
+    </p>
+}
+

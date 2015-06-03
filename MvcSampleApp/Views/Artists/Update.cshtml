@@ -1,0 +1,17 @@
+﻿@model MvcSampleApp.Core.Models.Artist
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+@using (Html.BeginForm("Update", "Artists", FormMethod.Post))
+{
+    @Html.HiddenFor(a => a.ArtistId)
+    <div>
+        @Html.LabelFor(a => a.Name)
+        @Html.TextBoxFor(a => a.Name)
+
+        <input type="submit" value="Saved" />
+    </div>
+}

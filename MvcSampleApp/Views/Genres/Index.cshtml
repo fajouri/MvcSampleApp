@@ -1,0 +1,37 @@
+﻿@model System.Collections.Generic.List<MvcSampleApp.Core.Models.Genre>
+
+@{
+    ViewBag.Title = "Genres";
+}
+
+<h2>Genres</h2>
+@*<div>
+    @Html.ActionLink("Artist", "Index", "Artists")
+</div>*@
+
+@Html.ActionLink("New Genre", "New")
+
+<table style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var genre in Model)
+        {
+            <tr>
+                <td>@genre.Name</td>
+                <td>@genre.Description</td>
+                <td>@Html.ActionLink("Update", "Update", new { genreId = @genre.GenreId})</td>
+                <td>@Html.ActionLink("Delete", "Delete", new { genreId = @genre.GenreId })</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

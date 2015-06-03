@@ -1,0 +1,20 @@
+﻿@model MvcSampleApp.Core.Models.Artist
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+@using (Html.BeginForm("DeleteArtist", "Artists", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.ArtistId)
+
+    <div>
+        @Html.LabelFor(m => m.Name)
+        @Html.DisplayFor(m => m.Name)
+    </div>
+
+    <p>
+        Confirm Delete? <input type="submit" value="yes" />
+    </p>
+}

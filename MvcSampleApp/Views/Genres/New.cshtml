@@ -1,0 +1,24 @@
+﻿@model MvcSampleApp.Core.Models.Genre
+
+@{
+    ViewBag.Title = "New Genre";
+}
+
+<h2>New Genre</h2>
+
+@using (Html.BeginForm("New", "Genres", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name)
+    </div>
+
+    <div>
+        <label>Description</label>
+        <input type="text" name="Description" />
+        @Html.LabelFor(m => m.Description)
+        @Html.TextBoxFor(m => m.Description)
+    </div>
+    
+    <input type="submit" value="Save"/>
+}

@@ -1,0 +1,32 @@
+﻿@model System.Collections.Generic.List<MvcSampleApp.Core.Models.Artist>
+@{
+    ViewBag.Title = "Artists";
+}
+
+<h2>Artists</h2>
+@Html.ActionLink("New Artist", "New")
+<table style="width: 100%">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var artist in Model)
+        {
+            <tr>
+                <td>
+                    @artist.Name
+                </td>
+                <td>
+                   @Html.ActionLink("Update", "Update", new {artistId = @artist.ArtistId })
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { artistId = @artist.ArtistId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
