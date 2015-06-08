@@ -1,4 +1,4 @@
-﻿@model MvcSampleApp.Core.Models.Genre
+﻿@model MvcSampleApp.Models.GenreViewModel
 
 @{
     ViewBag.Title = "Delete Genre";
@@ -14,10 +14,12 @@
     <div>
         @Html.LabelFor(m => m.Name)
         @Html.DisplayFor(m => m.Name)
+        @Html.HiddenFor(m => m.Name)
     </div>
     <div>
         @Html.LabelFor(m => m.Description)
         @Html.DisplayFor(m => m.Description)
+        @Html.HiddenFor(m => m.Description)
     </div>
     
     <p>

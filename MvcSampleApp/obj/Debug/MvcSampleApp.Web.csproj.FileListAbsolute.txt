@@ -50,3 +50,31 @@ C:\Users\mugalde\Documents\Visual Studio 2013\MvcSampleApp\MvcSampleApp\bin\Syst
 C:\Users\mugalde\Documents\Visual Studio 2013\MvcSampleApp\MvcSampleApp\obj\Debug\MvcSampleApp.Web.csprojResolveAssemblyReference.cache
 C:\Users\mugalde\Documents\Visual Studio 2013\MvcSampleApp\MvcSampleApp\obj\Debug\MvcSampleApp.dll
 C:\Users\mugalde\Documents\Visual Studio 2013\MvcSampleApp\MvcSampleApp\obj\Debug\MvcSampleApp.pdb
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\MvcSampleApp.dll.config
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\MvcSampleApp.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\MvcSampleApp.pdb
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\MvcSampleApp.Core.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\MvcSampleApp.Data.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\MvcSampleApp.Services.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\System.Web.Helpers.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\System.Web.Mvc.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\System.Web.Razor.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\System.Web.Webpages.Deployment.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\System.Web.Webpages.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\System.Web.Webpages.Razor.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\EntityFramework.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\EntityFramework.SqlServer.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\MvcSampleApp.Core.pdb
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\MvcSampleApp.Data.pdb
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\MvcSampleApp.Services.pdb
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\System.Web.Razor.xml
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\System.Web.Webpages.xml
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\System.Web.Webpages.Deployment.xml
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\System.Web.Webpages.Razor.xml
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\System.Web.Helpers.xml
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\System.Web.Mvc.xml
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\EntityFramework.xml
+C:\curso\temp\MvcSampleApp\MvcSampleApp\bin\EntityFramework.SqlServer.xml
+C:\curso\temp\MvcSampleApp\MvcSampleApp\obj\Debug\MvcSampleApp.Web.csprojResolveAssemblyReference.cache
+C:\curso\temp\MvcSampleApp\MvcSampleApp\obj\Debug\MvcSampleApp.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp\obj\Debug\MvcSampleApp.pdb

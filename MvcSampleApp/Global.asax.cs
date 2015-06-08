@@ -2,7 +2,6 @@
 {
     using System.Web.Mvc;
     using System.Web.Routing;
-    using System.Data.Entity;
     using Data;
 
     public class MvcApplication : System.Web.HttpApplication
@@ -11,7 +10,6 @@
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            Database.SetInitializer<MusicStoreContext>(null);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model MvcSampleApp.Core.Models.Artist
+﻿@model MvcSampleApp.Models.ArtistViewModel
 @{
     ViewBag.Title = "New Artist";
 }
@@ -7,10 +7,12 @@
 
 @using (Html.BeginForm("New","Artists", FormMethod.Post))
 {
+    @Html.ValidationSummary(true);
     <div>
         @Html.LabelFor(m => m.Name)
         @Html.TextBoxFor(m => m.Name)
+        @Html.ValidationMessageFor(m => m.Name)
     </div>
 
-    <input type="submit" value="Saved" />
+    <input type="submit" value="Save" />
 }

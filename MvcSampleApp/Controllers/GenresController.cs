@@ -1,93 +1,105 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace MvcSampleApp.Controllers
 {
+    using Core.Interfaces;
+    using Core.Interfaces.Services;
     using Core.Models;
-    using Data;
+    using MvcSampleApp.Models;
+    using Services;
 
     public class GenresController : Controller
     {
-        //
-        // GET: /Genres/
+
+        private readonly IGenreService genreService;
+
+        public GenresController() : this(new GenreService())
+        {
+            
+        }
+
+        public GenresController(IGenreService genreService)
+        {
+            this.genreService = genreService;
+        }
+
         public ActionResult Index()
         {
-            using (var context = new MusicStoreContext())
-            {
-                var genres = context.Genres.ToList();
-                return View(genres);
-            }
+            var genres = genreService.GetAll();
+            return View(genres);
         }
 
         public ActionResult New()
         {
-            var genre = new Genre();
+            var genre = new GenreViewModel();
 
             return View(genre);
         }
 
         [HttpPost]
-        public ActionResult New(Genre genre)
+        public ActionResult New(GenreViewModel viewModel)
         {
-            using (var context = new MusicStoreContext())
+            try
             {
-                context.Genres.Add(genre);
-                context.SaveChanges();
-            }
+                var genre = Helpers.ModelHelpers.ToModel<Genre, GenreViewModel>(viewModel);
+                genreService.Save(genre);
 
-            return RedirectToAction("Index");
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("Name", ex.Message);
+                return View(viewModel);
+            }
         }
 
         public ActionResult Update(int genreId)
         {
-            using (var context = new MusicStoreContext())
-            {
-                var genre = context.Genres.FirstOrDefault(g => g.GenreId.Equals(genreId));
+            var genre = genreService.GetById(genreId);
+            var viewModel = Helpers.ModelHelpers.ToModel<GenreViewModel, Genre>(genre);
 
-                return View(genre);
-            }
+            return View(viewModel);
         }
 
         [HttpPost]
-        public ActionResult Update(Genre genre)
+        public ActionResult Update(GenreViewModel viewModel)
         {
-            using (var context = new MusicStoreContext())
+            try
             {
-                var currentGenre = context.Genres.FirstOrDefault(g => g.GenreId.Equals(genre.GenreId));
-                currentGenre.Name = genre.Name;
-                currentGenre.Description = genre.Description;
+                var genre = Helpers.ModelHelpers.ToModel<Genre, GenreViewModel>(viewModel);
+                genreService.Save(genre);
 
-                context.SaveChanges();
+                return RedirectToAction("Index");
             }
-
-            return RedirectToAction("Index");
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("Name", ex.Message);
+                return View(viewModel);
+            }
         }
 
         public ActionResult Delete(int genreId)
         {
-            using (var context = new MusicStoreContext())
-            {
-                var genre = context.Genres.FirstOrDefault(g => g.GenreId.Equals(genreId));
+            var genre = genreService.GetById(genreId);
 
-                return View(genre);
-            }
+            var viewModel = Helpers.ModelHelpers.ToModel<GenreViewModel, Genre>(genre);
+            return View(viewModel);
         }
 
         [HttpPost]
-        public ActionResult DeleteGenre(int genreId)
+        public ActionResult DeleteGenre(GenreViewModel model)
         {
-            using ( var context = new MusicStoreContext())
+            try
             {
-                var genre = context.Genres.FirstOrDefault(g => g.GenreId.Equals(genreId));
-                context.Genres.Remove(genre);
-
-                context.SaveChanges();
+                genreService.Delete(model.GenreId);
+                return RedirectToAction("Index");
             }
-
-            return RedirectToAction("Index");
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("Name", ex.Message);
+                return View("Delete", model);
+            }
         }
 	}
 }

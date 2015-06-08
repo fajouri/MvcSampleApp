@@ -1,4 +1,4 @@
-﻿@model MvcSampleApp.Core.Models.Artist
+﻿@model MvcSampleApp.Models.ArtistViewModel
 @{
     ViewBag.Title = "Update";
 }
@@ -7,11 +7,13 @@
 
 @using (Html.BeginForm("Update", "Artists", FormMethod.Post))
 {
-    @Html.HiddenFor(a => a.ArtistId)
+    @Html.HiddenFor(m => m.ArtistId)
+    @Html.ValidationSummary(true);
     <div>
-        @Html.LabelFor(a => a.Name)
-        @Html.TextBoxFor(a => a.Name)
-
-        <input type="submit" value="Saved" />
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name)
+        @Html.ValidationMessageFor(m => m.Name)
+       
     </div>
+    <input type="submit" value="Save" />
 }

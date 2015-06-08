@@ -1,0 +1,14 @@
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Services\bin\Debug\MvcSampleApp.Services.dll.config
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Services\bin\Debug\MvcSampleApp.Services.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Services\bin\Debug\MvcSampleApp.Services.pdb
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Services\bin\Debug\EntityFramework.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Services\bin\Debug\MvcSampleApp.Core.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Services\bin\Debug\MvcSampleApp.Data.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Services\bin\Debug\MvcSampleApp.Core.pdb
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Services\bin\Debug\MvcSampleApp.Data.pdb
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Services\bin\Debug\EntityFramework.xml
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Services\obj\Debug\MvcSampleApp.Services.csprojResolveAssemblyReference.cache
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Services\obj\Debug\MvcSampleApp.Services.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Services\obj\Debug\MvcSampleApp.Services.pdb

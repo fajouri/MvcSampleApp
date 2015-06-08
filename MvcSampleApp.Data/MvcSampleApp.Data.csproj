@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IMusicStoreContext.cs" />
+    <Compile Include="Mappings\AlbumMapping.cs" />
     <Compile Include="Mappings\ArtistsMapping.cs" />
     <Compile Include="Mappings\GenresMapping.cs" />
     <Compile Include="MusicStoreContext.cs" />

@@ -1,4 +1,4 @@
-﻿@model MvcSampleApp.Core.Models.Genre
+﻿@model MvcSampleApp.Models.GenreViewModel
 
 @{
     ViewBag.Title = "New Genre";
@@ -8,14 +8,15 @@
 
 @using (Html.BeginForm("New", "Genres", FormMethod.Post))
 {
+    @Html.ValidationSummary(true)
     <div>
         @Html.LabelFor(m => m.Name)
         @Html.TextBoxFor(m => m.Name)
+        @Html.ValidationMessageFor(m => m.Name)
     </div>
 
     <div>
-        <label>Description</label>
-        <input type="text" name="Description" />
+        
         @Html.LabelFor(m => m.Description)
         @Html.TextBoxFor(m => m.Description)
     </div>

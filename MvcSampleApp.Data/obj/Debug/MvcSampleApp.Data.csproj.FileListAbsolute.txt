@@ -22,3 +22,15 @@ C:\Users\mugalde\Documents\Visual Studio 2013\MvcSampleApp\MvcSampleApp.Data\bin
 C:\Users\mugalde\Documents\Visual Studio 2013\MvcSampleApp\MvcSampleApp.Data\obj\Debug\MvcSampleApp.Data.csprojResolveAssemblyReference.cache
 C:\Users\mugalde\Documents\Visual Studio 2013\MvcSampleApp\MvcSampleApp.Data\obj\Debug\MvcSampleApp.Data.dll
 C:\Users\mugalde\Documents\Visual Studio 2013\MvcSampleApp\MvcSampleApp.Data\obj\Debug\MvcSampleApp.Data.pdb
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Data\bin\Debug\MvcSampleApp.Data.dll.config
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Data\bin\Debug\MvcSampleApp.Data.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Data\bin\Debug\MvcSampleApp.Data.pdb
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Data\bin\Debug\EntityFramework.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Data\bin\Debug\MvcSampleApp.Core.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Data\bin\Debug\MvcSampleApp.Core.pdb
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Data\bin\Debug\EntityFramework.xml
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Data\obj\Debug\MvcSampleApp.Data.csprojResolveAssemblyReference.cache
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Data\obj\Debug\MvcSampleApp.Data.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Data\obj\Debug\MvcSampleApp.Data.pdb

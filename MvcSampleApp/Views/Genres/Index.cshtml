@@ -1,4 +1,4 @@
-﻿@model System.Collections.Generic.List<MvcSampleApp.Core.Models.Genre>
+﻿@model System.Collections.Generic.IEnumerable<MvcSampleApp.Core.Models.Genre>
 
 @{
     ViewBag.Title = "Genres";
@@ -29,9 +29,33 @@
                 <td>@genre.Name</td>
                 <td>@genre.Description</td>
                 <td>@Html.ActionLink("Update", "Update", new { genreId = @genre.GenreId})</td>
-                <td>@Html.ActionLink("Delete", "Delete", new { genreId = @genre.GenreId })</td>
+                <td><a href="#" onclick="deleteGenre(@genre.GenreId);">Delete</a></td>
             </tr>
         }
     </tbody>
 </table>
 
+<div id="deleteDialog">
+    <p>Confirm delete?</p>
+</div>
+
+<script type="text/javascript">
+    
+    function deleteGenre(genreId) {
+
+       
+        $("#deleteDialog").dialog({        
+            buttons: [
+                {text: "Ok",
+                click: function() {
+
+                    $.post("/genres/DeleteGenre", { genreId: genreId }, function() { $(this).close(); });
+                }
+                }
+            ],
+            close: function () {$(this).remove()}
+        });
+    }
+
+
+</script>

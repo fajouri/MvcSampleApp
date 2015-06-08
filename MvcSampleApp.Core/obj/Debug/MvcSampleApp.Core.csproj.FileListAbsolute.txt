@@ -8,3 +8,8 @@ C:\Users\mugalde\Documents\Visual Studio 2013\MvcSampleApp\MvcSampleApp.Core\bin
 C:\Users\mugalde\Documents\Visual Studio 2013\MvcSampleApp\MvcSampleApp.Core\obj\Debug\MvcSampleApp.Core.csprojResolveAssemblyReference.cache
 C:\Users\mugalde\Documents\Visual Studio 2013\MvcSampleApp\MvcSampleApp.Core\obj\Debug\MvcSampleApp.Core.dll
 C:\Users\mugalde\Documents\Visual Studio 2013\MvcSampleApp\MvcSampleApp.Core\obj\Debug\MvcSampleApp.Core.pdb
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Core\bin\Debug\MvcSampleApp.Core.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Core\bin\Debug\MvcSampleApp.Core.pdb
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Core\obj\Debug\MvcSampleApp.Core.dll
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Core\obj\Debug\MvcSampleApp.Core.pdb
+C:\curso\temp\MvcSampleApp\MvcSampleApp.Core\obj\Debug\MvcSampleApp.Core.csprojResolveAssemblyReference.cache

@@ -1,82 +1,104 @@
 ﻿using MvcSampleApp.Core.Models;
 using MvcSampleApp.Data;
-using System;
-using System.Collections.Generic;
+using MvcSampleApp.Models;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace MvcSampleApp.Controllers
 {
+    using System;
+    using Core.Interfaces.Services;
+    using Services;
+
     public class ArtistsController : Controller
     {
-        // GET: Artists
+        private readonly IArtistService artistService;
+
+        public ArtistsController()
+            : this(new ArtistService())
+        {
+
+        }
+
+        public ArtistsController(IArtistService artistService)
+        {
+            this.artistService = artistService;
+        }
+
         public ActionResult Index()
         {
-            using (var context = new MusicStoreContext())
-            {
-                var artists = context.Artists.Distinct().ToList();                
-                return View(artists);
-            }            
+            var artists = artistService.GetAll();               
+            return View(artists);
         }
 
         public ActionResult New()
         {
-            Artist artist = new Artist();
+            var artist = new ArtistViewModel();
             return View(artist);
         }
 
         [HttpPost]
-        public ActionResult New(Artist artist)
+        public ActionResult New(ArtistViewModel viewModel)
         {
-            using (var context = new MusicStoreContext())
+            var artist = Helpers.ModelHelpers.ToModel<Artist, ArtistViewModel>(viewModel);
+
+            try
             {
-                var artists = context.Artists.Add(artist);
-                context.SaveChanges();
+                artistService.Save(artist);
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("Name", ex.Message);
+                return View(viewModel);
+            }
         }
 
         public ActionResult Update(int artistId)
         {
-            using (var context = new MusicStoreContext())
-            {
-                var artist = context.Artists.FirstOrDefault(a => a.ArtistId.Equals(artistId));
-                return View(artist);
-            }
+            var artist = artistService.GetById(artistId);
+            var viewModel = Helpers.ModelHelpers.ToModel<ArtistViewModel, Artist>(artist);
+            return View(viewModel);
         }
 
         [HttpPost]
-        public ActionResult Update(Artist artist)
+        public ActionResult Update(ArtistViewModel viewModel)
         {
-            using (var context = new MusicStoreContext())
+            var artist = Helpers.ModelHelpers.ToModel<Artist, ArtistViewModel>(viewModel);
+
+            try
             {
-                var currentArtist = context.Artists.FirstOrDefault(a => a.ArtistId.Equals(artist.ArtistId));
-                currentArtist.Name = artist.Name;
-                context.SaveChanges();
+                artistService.Save(artist);
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("Name", ex.Message);
+                return View(viewModel);
+            }
         }
 
         public ActionResult Delete(int artistId)
         {
-            using (var context = new MusicStoreContext())
-            {
-                var artist = context.Artists.FirstOrDefault(a => a.ArtistId.Equals(artistId));
-                return View(artist);
-            }
+            var artist = artistService.GetById(artistId);
+
+            var viewModel = Helpers.ModelHelpers.ToModel<ArtistViewModel, Artist>(artist);
+            return View(viewModel);
         }
 
         [HttpPost]
-        public ActionResult DeleteArtist(int artistId)
+        public ActionResult DeleteArtist(ArtistViewModel model)
         {
-            using (var context = new MusicStoreContext())
+            try
             {
-                var artist = context.Artists.FirstOrDefault(a => a.ArtistId.Equals(artistId));
-                context.Artists.Remove(artist);
-                context.SaveChanges();
+                artistService.Delete(model.ArtistId);
+                return RedirectToAction("Index");
             }
-            return RedirectToAction("Index");
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("Name", ex.Message);
+                return View("Delete", model);
+            }
         }
     }
 }
